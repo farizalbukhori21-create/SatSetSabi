@@ -1,0 +1,9 @@
+Tambahkan alias middleware berikut pada konfigurasi `->withMiddleware(...)` di `bootstrap/app.php` Laravel 12:
+
+use App\Http\Middleware\AdminMiddleware;
+
+$middleware->alias([
+    'admin' => AdminMiddleware::class,
+]);
+
+File ini berupa catatan patch agar tidak menimpa konfigurasi bootstrap bawaan project Laravel.
